@@ -8,6 +8,7 @@ var Router = Ember.Router.extend({
 Router.map(function() {
     this.route('button');
     this.route('datepicker');
+    this.route('progressBar');
 });
 
 export default Router;
