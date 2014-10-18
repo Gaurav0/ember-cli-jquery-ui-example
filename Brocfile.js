@@ -5,6 +5,9 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var app = new EmberApp({
     'ember-cli-jquery-ui': {
         'theme': 'smoothness'
+    },
+    fingerprint: {
+        exclude: ['assets/images']
     }
 });
 
