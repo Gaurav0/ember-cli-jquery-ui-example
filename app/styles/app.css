@@ -32,3 +32,8 @@ nav li:first-of-type {
     line-height: 35px;
     text-align: center;
 }
+
+.ui-slider {
+    width: 50%;
+    display: inline-block;
+}

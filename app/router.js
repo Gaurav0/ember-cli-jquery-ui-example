@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('datepicker');
     this.route('progressBar');
     this.route('spinner');
+    this.route('slider');
 });
 
 export default Router;
