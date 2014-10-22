@@ -1,3 +1,25 @@
 <h2>Button</h2>
 
 {{#jqui-button icon="ui-icon-gear" action="changeText"}}Click me{{/jqui-button}} {{text}}
+
+<p>To use the button as above, just add the following template and component to your application:</p>
+
+<h4>Template:</h4>
+<p><code>\{{#jqui-button icon="ui-icon-gear" action="changeText"}}Click me\{{/jqui-button}} \{{text}}</code></p>
+
+<h4>Controller:</h4>
+<p><code><pre>
+import Ember from 'ember';
+
+export default Ember.ObjectController.extend({
+    count: 0,
+    text: function() {
+        return "Clicked " + this.get('count') + " times.";
+    }.property('count'),
+    actions: {
+        changeText: function() {
+            this.incrementProperty('count');
+        }
+    }
+});
+</pre></code></p>
