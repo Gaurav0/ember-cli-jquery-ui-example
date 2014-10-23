@@ -5,3 +5,6 @@
 <h2>Range Slider</h2>
 {{jqui-slider values=vals min=0 max=100 step=10 range=true}} &nbsp; {{vals.firstObject}} - {{vals.lastObject}}
 <p>Just add <code>\{{jqui-slider values=vals min=0 max=100 step=10 range=true}} \{{vals.firstObject}} - \{{vals.lastObject}}</code> to any template in your application.</p>
+
+<h2>Custom Slider</h2>
+{{jqui-slider value=num2 min=0 max=100 step=10 slideAction="didSlide"}} &nbsp; {{text}}
