@@ -15,10 +15,12 @@ export default JquiProgressBarComponent.extend({
             _this.animate();
         }, 30);
     }.on('didInsertElement'),
-    complete: function() {
-        var _this = this;
-        Ember.run.next(function() {
-            _this.set('text', "Complete!");
-        });
+    uiActions: {
+        complete: function () {
+            var _this = this;
+            Ember.run.next(function () {
+                _this.set('text', "Complete!");
+            });
+        }
     }
 });

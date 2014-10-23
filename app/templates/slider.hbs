@@ -6,5 +6,43 @@
 {{jqui-slider values=vals min=0 max=100 step=10 range=true}} &nbsp; {{vals.firstObject}} - {{vals.lastObject}}
 <p>Just add <code>\{{jqui-slider values=vals min=0 max=100 step=10 range=true}} \{{vals.firstObject}} - \{{vals.lastObject}}</code> to any template in your application.</p>
 
-<h2>Custom Slider</h2>
-{{jqui-slider value=num2 min=0 max=100 step=10 slideAction="didSlide"}} &nbsp; {{text}}
+<h2>One Way Controlled Slider</h2>
+<p>Controlled by the basic slider above.</p>
+{{jqui-slider value=num2 min=0 max=100 step=10}} &nbsp; {{num2}}
+
+<h4>Template:</h4>
+<p><code>\{{jqui-slider value=num2 min=0 max=100 step=10}} \{{num2}}</code></p>
+
+<h4>Controller:</h4>
+<p><code><pre>
+import Ember from 'ember';
+
+export default Ember.ObjectController.extend({
+    num: 50,
+    num2: 50,
+    didSlideBasic: function() {
+        this.set('num2', this.get('num'));
+    }.observes('num')
+});
+</pre></code></p>
+
+<h2>Slider with action</h2>
+{{jqui-slider value=num3 min=0 max=100 step=10 slide="didSlide"}} &nbsp; {{num3}}<br>{{text}}
+
+<h4>Template:</h4>
+<p><code>\{{jqui-slider value=num3 min=0 max=100 step=10 slide="didSlide"}} \{{num3}} &lt;br&gt;\{{text}}</code></p>
+
+<h4>Controller:</h4>
+<p><code><pre>
+import Ember from 'ember';
+
+export default Ember.ObjectController.extend({
+    num3: 50,
+    text: "",
+    actions: {
+        didSlide: function(event, ui) {
+            this.set('text', this.get('text') + "_");
+        }
+    }
+});
+</pre></code></p>
