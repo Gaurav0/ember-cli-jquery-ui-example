@@ -1,0 +1,22 @@
+<h2>Autocomplete</h2>
+
+{{jqui-autocomplete value=text source=languages}} {{text}}
+
+<p>To use the autocomplete widget as above, just add the following template and controller to your application:</p>
+
+<h4>Template:</h4>
+<p><code>\{{jqui-autocomplete value=text source=languages}} \{{text}}</code></p>
+
+<h4>Controller</h4>
+<p><code><pre>
+import Ember from 'ember';
+
+export default Ember.ObjectController.extend({
+   text: "",
+   languages: [
+       "Ada",
+       "Algol",
+       // ...
+   ]
+});
+</pre></code></p>

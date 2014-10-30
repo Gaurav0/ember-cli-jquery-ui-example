@@ -10,7 +10,7 @@ export default Ember.ObjectController.extend({
         this.set('num2', this.get('num'));
     }.observes('num'),
     actions: {
-        didSlide: function(event, ui) {
+        didSlide: function() {
             this.set('text', this.get('text') + "_");
         }
     }
