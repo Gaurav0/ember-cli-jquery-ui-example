@@ -27,10 +27,10 @@ export default Ember.ObjectController.extend({
 </pre></code></p>
 
 <h2>Slider with action</h2>
-{{jqui-slider value=num3 min=0 max=100 step=10 slide="didSlide"}} &nbsp; {{num3}}<br>{{text}}
+{{jqui-slider value=num3 min=0 max=100 step=10 slide="didSlide"}} &nbsp; {{num3}}<br>{{containerName}}
 
 <h4>Template:</h4>
-<p><code>\{{jqui-slider value=num3 min=0 max=100 step=10 slide="didSlide"}} \{{num3}} &lt;br&gt;\{{text}}</code></p>
+<p><code>\{{jqui-slider value=num3 min=0 max=100 step=10 slide="didSlide"}} \{{num3}} &lt;br&gt;\{{containerName}}</code></p>
 
 <h4>Controller:</h4>
 <p><code><pre>
@@ -38,10 +38,14 @@ import Ember from 'ember';
 
 export default Ember.ObjectController.extend({
     num3: 50,
-    text: "",
+    underscores: "__",
+    containerName: function() {
+        var underscores = this.get('underscores');
+        return "App." + underscores + "container" + underscores;
+    }.property('underscores'),
     actions: {
         didSlide: function(event, ui) {
-            this.set('text', this.get('text') + "_");
+            this.set('underscores', this.get('underscores') + "_");
         }
     }
 });
