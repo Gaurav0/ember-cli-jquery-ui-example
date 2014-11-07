@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-jquery-ui-example",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "private": true,
   "directories": {
     "doc": "doc",

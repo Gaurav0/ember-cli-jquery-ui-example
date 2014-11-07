@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+    this.route('accordion');
     this.route('autocomplete');
     this.route('button');
     this.route('datepicker');
