@@ -1,12 +1,18 @@
-<nav>
-    <li>{{#link-to "accordion"}}Accordion{{/link-to}}</li>
-    <li>{{#link-to "autocomplete"}}Autocomplete{{/link-to}}</li>
-    <li>{{#link-to "button"}}Button{{/link-to}}</li>
-    <li>{{#link-to "datepicker"}}Datepicker{{/link-to}}</li>
-    <li>{{#link-to "progressBar"}}Progress Bar{{/link-to}}</li>
-    <li>{{#link-to "slider"}}Slider{{/link-to}}</li>
-    <li>{{#link-to "spinner"}}Spinner{{/link-to}}</li>
-    <li>{{#link-to "tabs"}}Tabs{{/link-to}}</li>
-</nav>
+<h1>Example usage of included components:</h1>
 
-{{outlet}}
+<div class="ui-tabs ui-widget ui-widget-content ui-corner-all">
+    <nav class="ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all">
+        {{#link-to "accordion" tagName="li" href=false class="ui-state-default ui-corner-top" activeClass="ui-tabs-active ui-state-active"}}<a class="ui-tabs-anchor" {{bind-attr href="view.href"}}>Accordion</a>{{/link-to}}
+        {{#link-to "autocomplete" tagName="li" href=false class="ui-state-default ui-corner-top" activeClass="ui-tabs-active ui-state-active"}}<a class="ui-tabs-anchor" {{bind-attr href="view.href"}}>Autocomplete</a>{{/link-to}}
+        {{#link-to "button" tagName="li" href=false class="ui-state-default ui-corner-top" activeClass="ui-tabs-active ui-state-active"}}<a class="ui-tabs-anchor" {{bind-attr href="view.href"}}>Button</a>{{/link-to}}
+        {{#link-to "datepicker" tagName="li" href=false class="ui-state-default ui-corner-top" activeClass="ui-tabs-active ui-state-active"}}<a class="ui-tabs-anchor" {{bind-attr href="view.href"}}>Datepicker</a>{{/link-to}}
+        {{#link-to "progressBar" tagName="li" href=false class="ui-state-default ui-corner-top" activeClass="ui-tabs-active ui-state-active"}}<a class="ui-tabs-anchor" {{bind-attr href="view.href"}}>Progress Bar</a>{{/link-to}}
+        {{#link-to "slider" tagName="li" href=false class="ui-state-default ui-corner-top" activeClass="ui-tabs-active ui-state-active"}}<a class="ui-tabs-anchor" {{bind-attr href="view.href"}}>Slider</a>{{/link-to}}
+        {{#link-to "spinner" tagName="li" href=false class="ui-state-default ui-corner-top" activeClass="ui-tabs-active ui-state-active"}}<a class="ui-tabs-anchor" {{bind-attr href="view.href"}}>Spinner</a>{{/link-to}}
+        {{#link-to "tabs" tagName="li" href=false class="ui-state-default ui-corner-top" activeClass="ui-tabs-active ui-state-active"}}<a class="ui-tabs-anchor" {{bind-attr href="view.href"}}>Tabs</a>{{/link-to}}
+    </nav>
+
+    <div class="ui-tabs-panel ui-widget-content ui-corner-bottom ui-">
+        {{outlet}}
+    </div>
+</div>

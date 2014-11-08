@@ -41,3 +41,7 @@ nav li:first-of-type {
 .ui-accordion {
     width: 50%;
 }
+
+.ui-tabs .ui-tabs {
+    width: 50%;
+}
