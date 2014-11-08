@@ -13,6 +13,7 @@ Router.map(function() {
     this.route('progressBar');
     this.route('slider');
     this.route('spinner');
+    this.route('tabs');
 });
 
 export default Router;
