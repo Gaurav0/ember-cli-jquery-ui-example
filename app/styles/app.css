@@ -27,6 +27,7 @@ nav li:first-of-type {
 
 .ui-progressbar {
     width: 50%;
+    min-width: 600px;
     heigth: 30px;
     position: relative;
 }
@@ -43,17 +44,21 @@ nav li:first-of-type {
 
 .ui-slider {
     width: 50%;
+    min-width: 600px;
     display: inline-block;
 }
 
 .ui-accordion {
+    min-width: 600px;
     width: 50%;
+}
+
+.ui-tabs {
+    width: 100%;
+    min-width: 640px;
 }
 
 .ui-tabs .ui-tabs {
-    width: 50%;
-}
-
-.ui-tabs, .ui-tabs-nav, .ui-tabs-panel {
     min-width: 600px;
+    width: 50%;
 }
