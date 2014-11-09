@@ -6,6 +6,10 @@ html, body {
     margin: 20px;
 }
 
+h1.extra-space-on-bottom {
+    margin-bottom: 60px;
+}
+
 nav {
     margin: 20px 0;
 }
