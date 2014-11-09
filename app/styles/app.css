@@ -53,3 +53,7 @@ nav li:first-of-type {
 .ui-tabs .ui-tabs {
     width: 50%;
 }
+
+.ui-tabs, .ui-tabs-nav, .ui-tabs-panel {
+    min-width: 600px;
+}
