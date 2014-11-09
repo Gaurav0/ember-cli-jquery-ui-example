@@ -1,3 +1,7 @@
+a[href], input[type='submit'], input[type='image'], label[for], button, .pointer {
+    cursor: pointer;
+}
+
 html, body {
     margin: 20px;
 }
