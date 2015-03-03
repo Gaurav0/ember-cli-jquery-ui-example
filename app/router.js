@@ -10,6 +10,7 @@ Router.map(function() {
     this.route('autocomplete');
     this.route('button');
     this.route('datepicker');
+    this.route('menu');
     this.route('progressBar');
     this.route('slider');
     this.route('spinner');

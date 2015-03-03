@@ -53,6 +53,11 @@ nav li:first-of-type {
     width: 50%;
 }
 
+.ui-menu {
+    min-width: 240px;
+    width: 50%;
+}
+
 .ui-tabs {
     width: 100%;
     min-width: 640px;
