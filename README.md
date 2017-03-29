@@ -2,6 +2,8 @@
 
 This is an example application for the ember-cli-jquery-ui addon.
 
+**This package is deprecated. I no longer recommend using JQuery plugins in Ember.js**
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
